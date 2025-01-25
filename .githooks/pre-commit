@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Run Credo in strict mode
+mix credo --strict
+
+# Capture the exit code
+EXIT_CODE=$?
+
+if [ $EXIT_CODE -ne 0 ]; then
+  echo "Commit aborted due to Credo issues."
+  exit $EXIT_CODE
+fi
+
+exit 0
