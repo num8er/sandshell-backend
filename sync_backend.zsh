@@ -3,7 +3,7 @@
 # Variables
 LOCAL_DIR="/Users/num8er/My/Sandshell/sandshell_backend/"
 REMOTE_USER="num8er"
-REMOTE_HOST="srv0.sandshell.dev" # e.g., example.com or an IP address
+REMOTE_HOST="dev0.sandshell.dev" # e.g., example.com or an IP address
 REMOTE_DIR="/apps/sandshell_backend"
 
 # Rsync command
