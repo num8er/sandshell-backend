@@ -13,7 +13,7 @@ config :sandshell_api, SandshellApi.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   server: true,
-  http: [ip: {127, 0, 0, 1}, port: 4000],
+  http: [ip: {127, 0, 0, 1}, port: 5500],
   url: [host: "sandshell.dev", port: 80],
   check_origin: false,
   code_reloader: true,

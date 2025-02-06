@@ -3,89 +3,101 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sandshell" />
-    <title>
-      Sandshell - execute code safely in sandbox from anywhere in anywhere
-    </title>
+    <title>Sandbox CLI Tool</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
       body {
         font-family: Arial, sans-serif;
+        margin: 40px;
         line-height: 1.6;
-        background: #f4f4f9;
+      }
+      h1,
+      h2 {
         color: #333;
       }
-      header {
-        background: #4caf50;
-        color: #fff;
-        padding: 1rem 0;
-        text-align: center;
-      }
-      header h1 {
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
-      }
-      header p {
-        font-size: 1.2rem;
-      }
-      section {
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 1rem;
-      }
-      .features {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-      }
-      .feature {
-        flex: 1 1 calc(33% - 1rem);
-        background: #fff;
-        padding: 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        text-align: center;
-      }
-      .feature h3 {
-        color: #4caf50;
-        margin-bottom: 1rem;
-      }
-      .cta {
-        text-align: center;
-        margin-top: 2rem;
-      }
-      .cta a {
-        display: inline-block;
-        background: #4caf50;
-        color: #fff;
-        padding: 0.75rem 1.5rem;
-        text-decoration: none;
-        font-size: 1.2rem;
+      pre {
+        background: #f4f4f4;
+        padding: 10px;
         border-radius: 5px;
       }
-      .cta a:hover {
-        background: #45a049;
+      code {
+        font-family: monospace;
+        color: #d63384;
       }
-      footer {
-        text-align: center;
-        margin-top: 3rem;
-        padding: 1rem;
-        background: #333;
-        color: #fff;
+      ul {
+        list-style-type: square;
       }
     </style>
   </head>
   <body>
-    <header>
-      <h1>Sandshell</h1>
-      <p>Execute your code safely from anywhere in anywhere!</p>
-    </header>
-    <footer>
-      <p>&copy; 2025 Sandshell. All rights reserved.</p>
-    </footer>
+    <h1>Sandbox CLI Tool and Platform</h1>
+
+    <h2>Purpose</h2>
+    <p>
+      A CLI tool and platform enabling users to securely run untrusted code in a
+      sandboxed environment using Docker. It supports both remote hosting and
+      on-premises deployment.
+    </p>
+
+    <h2>Installation</h2>
+    <p>The Sandbox CLI tool can be installed with a single command:</p>
+    <pre><code>wget https://sandshell.dev -O /usr/local/bin/sandshell && chmod +x /usr/local/bin/sandshell</code></pre>
+
+    <h2>Workflow</h2>
+    <p>Run the CLI:</p>
+    <pre><code>sandshell init</code></pre>
+
+    <p>Choose Environment Type:</p>
+    <ul>
+      <li>1) On-premises: Runs the sandshell locally</li>
+      <li>
+        2) Remotely: Prompts for your sandshell.dev username and password.
+      </li>
+    </ul>
+
+    <p>Select Initial Docker Image:</p>
+    <ul>
+      <li>1) nodejs</li>
+      <li>2) golang</li>
+      <li>3) rust</li>
+      <li>n) draft</li>
+    </ul>
+
+    <h3>Run Your App:</h3>
+    <p>In case of a Node.js app:</p>
+    <pre><code>sandshell npm run dev
+[INFO] Starting sandbox...
+[INFO] Environment isolated successfully.
+[INFO] Your app is running at eu-4j2k8sR7.johndoe.sndsh.dev</code></pre>
+
+    <h2>Key Features</h2>
+    <ul>
+      <li>
+        <strong>Secure Environment:</strong> Isolated environments powered by
+        Docker.
+      </li>
+      <li>
+        <strong>Flexible Deployment:</strong> Supports both on-premises and
+        remote setups.
+      </li>
+      <li>
+        <strong>Ease of Use:</strong> Minimal setup with an intuitive CLI.
+      </li>
+      <li>
+        <strong>Dynamic URLs:</strong> Apps are hosted on unique, user-specific
+        subdomains for easy access.
+      </li>
+    </ul>
+
+    <h2>Use Cases</h2>
+    <ul>
+      <li>
+        <strong>Developers:</strong> Experiment with untrusted code risk-free.
+      </li>
+      <li><strong>Teams:</strong> Collaborate on secure environments.</li>
+      <li>
+        <strong>Enterprises:</strong> On-premises support for compliance and
+        control.
+      </li>
+    </ul>
   </body>
 </html>
